@@ -47,8 +47,11 @@ public class EQManager {
 
 	// Get Nearby Earthquake details using the map
 	public Map<Long, Earthquake> getNearbyEarthquakeDetails(double latitude, double longitude) throws DataException {
+		//Get Days limit from properties file
 		PropertiesHandler prop_handler = new PropertiesHandler(PROPERTIES_FILE);
 		int count = Integer.parseInt(prop_handler.getProperty(EQ_MONTH_LIMIT));
+		
+		//limit the number of days according to count
 		Map<Long, Earthquake> allEarthquakes = getEarthquakeDetails(latitude, longitude);
 		return allEarthquakes.entrySet().stream().limit(count).collect(TreeMap::new,
 				(limited, all) -> limited.put(all.getKey(), all.getValue()), Map::putAll);
@@ -71,7 +74,7 @@ public class EQManager {
 		return stringBuilder.toString();
 	}
 
-	public void shutdown() {
+	public void stop() {
 		dataSrc.shutdown();
 	}
 }

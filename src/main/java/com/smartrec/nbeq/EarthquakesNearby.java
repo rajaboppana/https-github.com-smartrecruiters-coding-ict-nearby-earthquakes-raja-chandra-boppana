@@ -39,7 +39,7 @@ public class EarthquakesNearby {
 	        String line = scanner.nextLine();
 	        //exit check
 	        if (line.equalsIgnoreCase("E")) {
-	            eqManager.shutdown();
+	            eqManager.stop();
 	            isRunning = false;
 	        } else {
 	            try {
