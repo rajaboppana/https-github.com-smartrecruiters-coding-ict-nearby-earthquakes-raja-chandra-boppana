@@ -28,11 +28,6 @@ title || distance
 title || distance  
 ```
 
-## Running Instructions
-*Run the main class EarthquakesNearby.class
-*Check the console for instructions for input
-```
-
 Note that if two earthquakes happened in the same location (lat/lon) we only want it to appear only once on the list. 
 
 ## Summary
