@@ -12,7 +12,7 @@
 	<artifactId>nearbyearthquakes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>nearbyearthquakes</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Near By Eartquakes</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -29,6 +29,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
+		 <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+            <scope>compile</scope>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
